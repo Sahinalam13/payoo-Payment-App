@@ -9,23 +9,28 @@
     <!-- tailwind cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
+<body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center">
+    <!-- image  -->
+    <div class="h-[130px] w-[315px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center" >
+        <img src="./assets/Group.png" alt="">
+
+    </div>
+    <!-- form section -->
     <form class="bg-white rounded-2xl p-8 w-[400px]">
         <div class="mt-5">
             <label for="" class="font-medium text-[#080808]">Mobile Number</label>
             <br>
-            <input type="text" placeholder="Enter Your Number" class="input bg-[#F4F5F7] rounded-3xl mt-3 w-full font-light text-[#080808]" />
+            <input type="text" placeholder="Enter Your Number" id="mobile-number" class="input bg-[#F4F5F7] rounded-3xl mt-3 w-full font-light text-[#080808]" />
         </div>
         <div class="mt-5">
             <label for="" class="font-medium text-[#080808]"> 4 Digit Pin</label>
             <br>
-            <input type="text" placeholder="Enter 4 Digit Pin " class="input bg-[#F4F5F7] rounded-3xl mt-3 w-full font-light text-[#080808]" />
+            <input type="text" placeholder="Enter 4 Digit Pin " id="pin-number" class="input bg-[#F4F5F7] rounded-3xl mt-3 w-full font-light text-[#080808]" />
         </div>
         <br>
-        <button class="bg-[#0874F2] rounded-3xl w-full p-2 text-1.2rem font-semibold text-white">Login</button>
-
+        <button class="bg-[#0874F2] rounded-3xl w-full p-2 text-1.2rem font-semibold text-white" id="loginButton">Login</button>
     </form>
 
-    
+    <script src="./script.js"></script>
 </body>
 </html>
