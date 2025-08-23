@@ -11,7 +11,7 @@ document.getElementById("loginButton")
     const pinNumberValueConverter = parseInt(pinNumberValue);
 
     if(mobileNumberValueConverter === mobileNumber && pinNumberValueConverter === pinNumber){
-        window.location.href="./main.html"
+        window.location.href="./home.html"
     }
     else{
         alert("Invalid Credentials");
