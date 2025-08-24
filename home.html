@@ -62,6 +62,62 @@
     </header>
     <!-- all form section start here -->
     <section class="all-form-section max-w-[450px] mx-auto p-6">
+        <!-- latest payment form start here -->
+         <div id="latest-payment-parent">
+            <div class="flex justify-between items-center">
+                <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Latest Payment</h1>
+                <p class="text-[#08080880] text-[14px]">View All</p>
+            </div>
+            <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
+                <div class="flex justify-between items-center gap-2">
+                    <figure><img src="./assets/wallet1.png" class="" alt=""></figure>
+                <div>
+                    <h2 class="font-semibold text-gray-600">Electricity Bill</h2>
+                <p class="text-[12px] text-gray-500">Today 01:44 AM</p>
+                </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
+                <div class="flex justify-between items-center gap-2">
+                    <figure><img src="./assets/wallet1.png" class="" alt=""></figure>
+                <div>
+                    <h2 class="font-semibold text-gray-600">Bank Deposit</h2>
+                <p class="text-[12px] text-gray-500">Today 01:44 AM</p>
+                </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
+                <div class="flex justify-between items-center gap-2">
+                    <figure><img src="./assets/wallet1.png" class="" alt=""></figure>
+                <div>
+                    <h2 class="font-semibold text-gray-600">Mobile Recharge</h2>
+                <p class="text-[12px] text-gray-500">Today 01:44 AM</p>
+                </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
+                <div class="flex justify-between items-center gap-2">
+                    <figure><img src="./assets/wallet1.png" class="" alt=""></figure>
+                <div>
+                    <h2 class="font-semibold text-gray-600">Gas Bill</h2>
+                <p class="text-[12px] text-gray-500">Today 01:44 AM</p>
+                </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                </div>
+            </div>
+            
+        </div>
         <!-- add money form start here -->
         <div id="add-money-parent" style="display: none;">
                     <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Add Money</h1>
@@ -139,7 +195,7 @@
         </form>
         </div>
         <!-- get bonus form start -->
-         <div id="get-bonus-parent">
+         <div id="get-bonus-parent" style="display: none;">
                     <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Get Bonus</h1>
         <form class="bg-white rounded-2xl p-8 mb-[100px]">
             <div>
@@ -147,10 +203,11 @@
               <br>
               <input id="" type="text" placeholder="Enter your coupon" class="input bg-[#F4F5F7] rounded-3xl mt-3 w-full font-light text-[#666768] mb-4" />
             <button id="" class="bg-[#0874F2] rounded-3xl w-full p-2 text-1.2rem font-semibold text-white" >Get Bonus</button>
+            </div>
         </form>
         </div>
          <!-- pay bill form start -->
-         <div id="pay-bill-parent">
+         <div id="pay-bill-parent" style="display: none;">
                     <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Pay Bill</h1>
         <form class="bg-white rounded-2xl p-8 mb-[100px]">
             <div>
@@ -181,7 +238,7 @@
         </form>
         </div>
         <!-- transaction form start -->
-         <div id="transaction-parent">
+         <div id="transaction-parent" style="display: none;">
             <div class="flex justify-between items-center">
                 <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Transaction History</h1>
                 <p class="text-[#08080880] text-[14px]">View All</p>
@@ -237,9 +294,7 @@
             
         </div>
         
-       
 
-        
     </section>
     
     <script src="./home.js"></script>
