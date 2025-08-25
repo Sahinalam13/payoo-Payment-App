@@ -15,6 +15,20 @@ function getInnerText(id){
    const innerText = parseInt(document.getElementById(id).innerText);
    return innerText;
 }
+// function set inner text
+function setInnerText(value){
+    const availableBalnceElement = document.getElementById("available-balance").innerText;
+    availableBalnceElement= value;
+}
+
+// function to toggling
+function handleToggle(id){
+    const forms = document.getElementsByClassName("form");
+    for(const form of forms){
+        form.style.display ="none"
+    }
+    document.getElementById(id).style.display="block"
+}
 
 
 
@@ -39,8 +53,7 @@ document.getElementById("add-money-btn").addEventListener('click', function(e){
     return;
    }
 
-
-
+   
    const totalAvailableBalance = addAmountValue + availableBalanceValue;
    document.getElementById("available-balance").innerText = totalAvailableBalance;
   
@@ -75,95 +88,37 @@ document.getElementById("withdraw-btn").addEventListener('click', function(e){
 // add-money toggling
 document.getElementById("add-money")
 .addEventListener('click', function(){
-     document.getElementById("add-money-parent").style.display="block"
-     
-    document.getElementById("cash-out-parent").style.display="none"
-
-    document.getElementById("transfer-money-parent").style.display="none"
-
-    document.getElementById("get-bonus-parent").style.display="none"
-
-    document.getElementById("pay-bill-parent").style.display="none"
-
-    document.getElementById("transaction-parent").style.display="none"
+   handleToggle("add-money-parent")
+    
 })
 // cash-out toggling
 document.getElementById("cash-out")
 .addEventListener('click', function(){
-    document.getElementById("cash-out-parent").style.display="block"
+   handleToggle("cash-out-parent")
 
-    document.getElementById("add-money-parent").style.display="none"
-
-    document.getElementById("transfer-money-parent").style.display="none"
-
-    document.getElementById("get-bonus-parent").style.display="none"
-
-    document.getElementById("pay-bill-parent").style.display="none"
-
-    document.getElementById("transaction-parent").style.display="none"
 })
 // transfer-money toggling
 document.getElementById("transfer-money")
 .addEventListener('click', function(){
-    document.getElementById("transfer-money-parent").style.display="block"
-
-    document.getElementById("add-money-parent").style.display="none"
-
-    document.getElementById("cash-out-parent").style.display="none"
-
-    document.getElementById("get-bonus-parent").style.display="none"
-
-    document.getElementById("pay-bill-parent").style.display="none"
-
-    document.getElementById("transaction-parent").style.display="none"
+    handleToggle("transfer-money-parent")
     
 })
 // get bonus toggling
 document.getElementById("get-bonus")
 .addEventListener('click', function(){
-    document.getElementById("get-bonus-parent").style.display="block"
-
-    document.getElementById("add-money-parent").style.display="none"
-
-    document.getElementById("cash-out-parent").style.display="none"
-
-    document.getElementById("transfer-money-parent").style.display="none"
-
-    document.getElementById("pay-bill-parent").style.display="none"
-
-    document.getElementById("transaction-parent").style.display="none"
+   handleToggle("get-bonus-parent")
     
 })
 // pay bill toggling   
 document.getElementById("pay-bill")
 .addEventListener('click', function(){
-    document.getElementById("pay-bill-parent").style.display="block"
-
-    document.getElementById("add-money-parent").style.display="none"
-
-    document.getElementById("cash-out-parent").style.display="none"
-
-    document.getElementById("transfer-money-parent").style.display="none"
-
-    document.getElementById("get-bonus-parent").style.display="none"
-
-    document.getElementById("transaction-parent").style.display="none"
+    handleToggle("pay-bill-parent")
     
 })
 // transaction toggling
 document.getElementById("transaction")
 .addEventListener('click', function(){
-    document.getElementById("transaction-parent").style.display="block"
-
-    document.getElementById("add-money-parent").style.display="none"
-
-    document.getElementById("cash-out-parent").style.display="none"
-
-    document.getElementById("transfer-money-parent").style.display="none"
-
-    document.getElementById("get-bonus-parent").style.display="none"
-
-    document.getElementById("pay-bill-parent").style.display="none"
+    handleToggle("transaction-parent")
     
     
 })
