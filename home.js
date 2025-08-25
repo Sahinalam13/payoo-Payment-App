@@ -1,4 +1,5 @@
 const pinNumber = 1234;
+const transactionData = [];
 
 // reusable function to get input number value
 function getInputValueNumber(id){
@@ -64,6 +65,12 @@ document.getElementById("add-money-btn").addEventListener('click', function(e){
    
    const totalAvailableBalance = addAmountValue + availableBalanceValue;
    document.getElementById("available-balance").innerText = totalAvailableBalance;
+
+   const data ={
+    name: "Add Money",
+    date: new Date().toLocaleTimeString()
+   }
+   transactionData.push(data)
   
 })
 
