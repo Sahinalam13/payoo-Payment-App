@@ -71,6 +71,7 @@ document.getElementById("add-money-btn").addEventListener('click', function(e){
     date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
+   console.log(transactionData);
   
 })
 
@@ -96,6 +97,23 @@ document.getElementById("withdraw-btn").addEventListener('click', function(e){
 
     const totalAvailableBalance = availableBalanceValue - amountValue;
     document.getElementById("available-balance").innerText= totalAvailableBalance;
+
+
+   const data ={
+    name: "Cash Out",
+    date: new Date().toLocaleTimeString()
+   }
+   transactionData.push(data)
+   console.log(transactionData);
+})
+// transaction functionality
+document.getElementById("transaction")
+.addEventListener('click',function(){
+    const transactionCard = document.getElementById("transaction-card")
+    for(const data of transactionData){
+        const div = document.createElement("div")
+    
+    }
 })
 
 // toggling feature
