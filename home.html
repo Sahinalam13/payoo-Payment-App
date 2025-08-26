@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <!-- fav icon -->
+     <link rel="shortcut icon" href="./assets/Group.png" type="image/x-icon">
     <!-- daisy Ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- tailwind cdn -->
@@ -22,7 +24,7 @@
                 <p class="text-[#08080880]">Available Balance</p>
             </div>
         </div>
-        <div>
+        <div id="logout">
             <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"></i> Log Out</button>
         </div>
     </nav>
@@ -242,25 +244,13 @@
         </form>
         </div>
         <!-- transaction form start -->
-         <div class="form" id="transaction-parent" style="display: none;">
+         <div class="form h-[100vh]" id="transaction-parent" style="display: none;">
             <div class="flex justify-between items-center ">
                 <h1 class="text-[18px] font-semibold text-[#080808] mb-4">Transaction History</h1>
                 <p class="text-[#08080880] text-[14px] mb-3">View All</p>
             </div>
-            <div id="trasaction-card">
-                <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
-                <div class="flex justify-between items-center gap-2">
-                    <figure class=" p-3 rounded-full bg-[#F4F5F7]"><img src="./assets/wallet1.png" class="" alt="">
-                    </figure>
-                <div>
-                    <h2 class="font-semibold text-gray-600">Electricity Bill</h2>
-                <p class="text-[12px] text-gray-500">Today 01:44 AM</p>
-                </div>
-                </div>
-                <div>
-                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
-                </div>
-                </div>
+            <div id="transaction-card">
+               
                 
             </div>
             

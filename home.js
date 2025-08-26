@@ -48,9 +48,14 @@ document.getElementById("add-money-btn").addEventListener('click', function(e){
     e.preventDefault();
    const bankValue = getInputValue("bank")
    const accountNumberValue = getInputValue("accoun-number")
-   const addPinValue = getInputValueNumber("add-pin");
    const addAmountValue = getInputValueNumber("add-amount");
+   const addPinValue = getInputValueNumber("add-pin");
    const availableBalanceValue = getInnerText("available-balance")
+
+   if(addAmountValue<=0){
+    alert("Invalid Amount")
+    return;
+   }
 
    if(accountNumberValue.length < 11){
     alert("please provide a valid account number");
@@ -85,6 +90,11 @@ document.getElementById("withdraw-btn").addEventListener('click', function(e){
     const pinValue = getInputValueNumber("withdraw-pin")
 
     const availableBalanceValue = getInnerText("available-balance")
+
+    if(amountValue<=0 || amountValue>availableBalanceValue){
+        alert("Invalid Amount")
+        return;
+    }
     if(agentNumberValue.length< 11){
         alert("please enter valid number");
         return;
@@ -104,14 +114,32 @@ document.getElementById("withdraw-btn").addEventListener('click', function(e){
     date: new Date().toLocaleTimeString()
    }
    transactionData.push(data)
-   console.log(transactionData);
+   
 })
 // transaction functionality
 document.getElementById("transaction")
 .addEventListener('click',function(){
     const transactionCard = document.getElementById("transaction-card")
+
+    transactionCard.innerText = ""
+
     for(const data of transactionData){
         const div = document.createElement("div")
+        div.innerHTML = ` <div class="flex items-center justify-between bg-white py-[13px] px-4 rounded-lg mb-3">
+                <div class="flex justify-between items-center gap-2">
+                    <figure class=" p-3 rounded-full bg-[#F4F5F7]"><img src="./assets/wallet1.png" class="" alt="">
+                    </figure>
+                <div>
+                    <h2 class="font-semibold text-gray-600">${data.name}</h2>
+                <p class="text-[12px] text-gray-500">${data.date}</p>
+                </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                </div>
+                </div>
+                `
+                transactionCard.appendChild(div)
     
     }
 })
@@ -165,6 +193,13 @@ document.getElementById("transaction")
     handleFormBtn("transaction")
     
     
+})
+
+
+
+// log out functionality
+document.getElementById("logout").addEventListener('click', function(){
+    window.location.href="./index.html"
 })
 
 
